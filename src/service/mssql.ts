@@ -14,7 +14,7 @@ export class Mssql {
     @Init()
     async init() {
         this.server = new ConnectionPool(this.config, err => {
-            console.log(err ? err : 'Pesiv connect success');
+            console.log(err ? {err} : 'Pesiv connect success');
         })
     }
 
